@@ -6,9 +6,38 @@ Git Cheat Sheet
 
 This doc is mainly for listing all git commands needed on development cycle, So feel free to contribute. 
 
+## VIP git commands
+	
+	$ git config core.fileMode false
+	$ git branch
+	$ git branch -a
+	$ git branch -r
+	
+***
+
+- Delete Local Branch
+
+To delete the local branch use:
+
+	$ git branch -d branch_name
+or use:
+
+	$ git branch -D branch_name
+	
+>Note: The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch. You could also use -D, which is an alias for --delete --force, which deletes the branch "irrespective of its merged status.
+
+***
+
+- Delete Remote Branch
+
+    	$ git push origin --delete <branch_name>
+
+        $ git fetch origin --prune
+
+
 ## New Task on JIRA "UT-X"
 
-You shud have only updated 2 braches
+You should have only updated 2 braches
 
      $ git branch 
      * Dev
